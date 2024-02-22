@@ -516,8 +516,8 @@
   ```javascript
   // bad
   const bad = {
-    foo: 3,
-    bar: 4,
+    "foo": 3,
+    "bar": 4,
     "data-blah": 5,
   };
 
@@ -846,7 +846,7 @@
   const name = `Capt. Janeway`;
 
   // good
-  const name = "Capt. Janeway";
+  const name = 'Capt. Janeway';
   ```
 
 <a name="strings--line-length"></a><a name="6.2"></a>
@@ -887,11 +887,6 @@
     return ["How are you, ", name, "?"].join();
   }
 
-  // bad
-  function sayHi(name) {
-    return `How are you, ${name}?`;
-  }
-
   // good
   function sayHi(name) {
     return `How are you, ${name}?`;
@@ -913,7 +908,6 @@
   const foo = "'this' is \"quoted\"";
 
   // good
-  const foo = "'this' is \"quoted\"";
   const foo = `my name is '${name}'`;
   ```
 
@@ -1358,9 +1352,6 @@
   const itemHeight = (item) => (item.height >= 256 ? item.largeSize : item.smallSize);
 
   // good
-  const itemHeight = (item) => (item.height <= 256 ? item.largeSize : item.smallSize);
-
-  // good
   const itemHeight = (item) => {
     const { height, largeSize, smallSize } = item;
     return height <= 256 ? largeSize : smallSize;
@@ -1662,9 +1653,6 @@
   import foo from "foo";
   // … some other imports … //
   import { named1, named2 } from "foo";
-
-  // good
-  import foo, { named1, named2 } from "foo";
 
   // good
   import foo, { named1, named2 } from "foo";
